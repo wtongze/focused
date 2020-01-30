@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-
 * {
-    font-family: 'Ubuntu','Noto Sans SC', sans-serif !important;
+    font-family: 'Ubuntu', 'Noto Sans SC', sans-serif !important;
 }
 
-.gl, .io {
+.gl,
+.io {
     letter-spacing: normal !important;
 }
 
@@ -12,7 +12,8 @@ div[data-test-id="post-sidebar"] {
     display: none;
 }
 
-p[data-selectable-paragraph], li[data-selectable-paragraph] {
+p[data-selectable-paragraph],
+li[data-selectable-paragraph] {
     font-size: 18px;
 }
 
@@ -43,7 +44,7 @@ blockquote {
     margin-left: 0 !important;
 }
 
-blockquote  p {
+blockquote p {
     padding: 16px !important;
     font-size: 18px !important;
     font-style: italic;
@@ -58,7 +59,6 @@ figure {
     box-shadow: 3px 5px 10px 0px lightgrey;
     padding: 16px !important;
     border-radius: 16px;
-    
     margin-left: auto;
     margin-right: auto;
     max-width: 680px;
@@ -68,13 +68,13 @@ figure iframe {
     overflow-y: hidden;
 }
 
-article > div > section:first-of-type > div:first-of-type > div > div > div:last-of-type {
-	box-shadow: 3px 5px 10px 0px lightgrey;
+article>div>section:first-of-type>div:first-of-type>div>div>div:last-of-type {
+    box-shadow: 3px 5px 10px 0px lightgrey;
     padding: 20px;
     border-radius: 16px;
 }
 
-section > div > div {
+section>div>div {
     max-width: 680px !important;
     margin: 0 auto;
 }
@@ -84,5 +84,33 @@ aside {
 }
 
 @media print {
-  figure, img {page-break-inside: avoid !important;}
+    figure,
+    img {
+        page-break-inside: avoid !important;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    article h1,
+    article h2,
+    article p,
+    article ul,
+    article ol,
+    article li,
+    article div,
+    article figure,
+    article figcaption,
+    article img,
+    article blockquote {
+        color: white !important;
+        background-color: #313131;
+    }
+    article mark {
+        background-color: #525252 !important;
+    }
+    article>div>section:first-of-type>div:first-of-type>div>div>div:last-of-type,
+    article>div>section:first-of-type>div:first-of-type>div>div>div:last-of-type * {
+        background-color: #212529;
+        color: white;
+    }
 }

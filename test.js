@@ -1,27 +1,29 @@
 'use script';
 
-let article = document.querySelector('article > div:nth-child(3)');
-let focused = document.createElement('div');
-let focusedStyle = document.createElement('link');
-let gfmStyle = document.createElement('link');
+document.addEventListener('load', () => {
+    let article = document.querySelector('article > div:nth-child(3)');
+    let focused = document.createElement('div');
+    let focusedStyle = document.createElement('link');
+    let gfmStyle = document.createElement('link');
 
-focused.className = 'focused markdown-body';
+    focused.className = 'focused markdown-body';
 
-focusedStyle.rel = 'stylesheet';
-focusedStyle.href = 'http://127.0.0.1:8080/reader.css';
+    focusedStyle.rel = 'stylesheet';
+    focusedStyle.href = 'https://cdn.jsdelivr.net/gh/wtongze/focused@latest/reader.css';
 
-gfmStyle.rel = 'stylesheet';
-gfmStyle.href = 'https://cdn.jsdelivr.net/npm/github-markdown-css@3.0.1/github-markdown.css';
+    gfmStyle.rel = 'stylesheet';
+    gfmStyle.href = 'https://cdn.jsdelivr.net/npm/github-markdown-css@3.0.1/github-markdown.css';
 
-focused.append(article.cloneNode(true));
-let reader = focused.querySelector('div');
-reader.className = 'reader';
+    focused.append(article.cloneNode(true));
+    let reader = focused.querySelector('div');
+    reader.className = 'reader';
 
-extractContent();
+    extractContent();
 
-document.head.append(gfmStyle, focusedStyle);
-document.body.append(focused);
-document.body.style.overflow = 'hidden';
+    document.head.append(gfmStyle, focusedStyle);
+    document.body.append(focused);
+    document.body.style.overflow = 'hidden';
+});
 
 function extractContent() {
     // replace with real pictures

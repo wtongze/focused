@@ -1,13 +1,92 @@
-div.focused-reader {
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+:root {
+    --light-bg: #FFFFFF;
+    --light-text: #000000;
+    --light-shadow: #ced4da;
+    --dark-bg: #313131;
+    --dark-text: #E9ECEF;
+    --dark-shadow: #495057;
+}
+
+.focused {
     position: fixed;
     /*display: none;*/
+
     width: 100%;
     height: 100%;
+
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+
+    background-color: var(--light-bg);
+    color: var(--light-text);
+
     z-index: 10000;
-    /*transition: .5s ease;*/
+    overflow: auto;
+
+    font-family: 'Ubuntu', 'Noto Sans SC', sans-serif;
+}
+
+.focused > .reader {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .focused > .reader {
+        width: 540px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .focused > .reader {
+        width: 720px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .focused > .reader {
+        width: 960px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .focused > .reader {
+        width: 1140px;
+    }
+}
+
+.focused > .reader img {
+    position: initial;
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 75vh;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 2rem auto;
+
+    box-shadow: 3px 3px 9px 0 var(--light-shadow);
+}
+
+@media (prefers-color-scheme: dark) {
+    .focused {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+    }
+
+    .focused > .reader img {
+        box-shadow: 3px 3px 9px 0 var(--dark-shadow);
+    }
 }

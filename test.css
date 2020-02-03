@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900&display=swap');
 
 :root {
     --light-theme-bg: #F1F3F5;
@@ -26,7 +26,7 @@
     overflow: auto;
 
     font-family: 'Merriweather', 'Noto Sans', 'Noto Sans SC', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .reader {
@@ -55,7 +55,7 @@ h1, h2 {
 
 h1 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.015em;
     line-height: 1.12;
 
@@ -75,7 +75,6 @@ h2 {
 
 p {
     font-size: 1.25rem;
-    font-weight: 400;
     letter-spacing: -0.004em;
     line-height: 1.58;
     word-break: break-word;
@@ -124,7 +123,6 @@ figure > figcaption {
 
 li {
     font-size: 1.25rem;
-    font-weight: 400;
 
     margin-top: 2em;
     margin-left: 30px;
@@ -147,7 +145,7 @@ blockquote > p {
 
 mark {
     margin: 1rem;
-    background-color: #D8F5A2;
+    background-color: unset;
     font-size: 1.25rem;
     font-style: italic;
 }
@@ -161,8 +159,8 @@ a {
 }
 
 figcaption > a:hover {
-    box-shadow: 3px 3px 9px var(--light-theme-shadow);
-    background-color: var(--light-theme-bg);
+    box-shadow: none;
+    background-color: unset;
 }
 
 a:hover {
@@ -171,7 +169,7 @@ a:hover {
 }
 
 a > i.material-icons {
-    vertical-align: sub;
-    font-size: 1.5rem;
+    vertical-align: baseline;
+    font-size: inherit;
     padding-left: 0.5rem;
 }

@@ -8,7 +8,7 @@ let gfmStyle = document.createElement('link');
 focused.className = 'focused markdown-body';
 
 focusedStyle.rel = 'stylesheet';
-focusedStyle.href = 'http://127.0.0.1:8080/reader.css';
+focusedStyle.href = 'https://cdn.jsdelivr.net/gh/wtongze/focused@latest/reader.css';
 
 gfmStyle.rel = 'stylesheet';
 gfmStyle.href = 'https://cdn.jsdelivr.net/npm/github-markdown-css@3.0.1/github-markdown.css';

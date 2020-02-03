@@ -26,7 +26,11 @@ document.body.style.overflow = 'hidden';
 function extractContent() {
     // replace with real pictures
     reader.querySelectorAll('figure noscript').forEach((fig) => {
-        fig.closest('figure > div').innerHTML = fig.innerHTML;
+        try {
+            fig.closest('figure > div').innerHTML = fig.innerHTML;
+        } catch (e) {
+            console.log(fig, e);
+        }
     });
 
     // remove empty div tags

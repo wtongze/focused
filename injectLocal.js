@@ -14,5 +14,4 @@
     loadlocal.type = "text/javascript";
     loadlocal.src = "http://127.0.0.1:8080/test.js";
     document.body.append(loadlocal);
-    // Your code here...
 })();

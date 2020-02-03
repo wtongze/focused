@@ -2,10 +2,339 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Title</title>
-    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
-
+<div class="focused">
+    <div class="reader">
+        <section>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <h1>Color in UI Design: A (Practical) Framework</h1>
+                        </div>
+                        <!--                        <div class="article-info">-->
+                        <!--                            <img alt="Erik D. Kennedy"-->
+                        <!--                                 src="https://miro.medium.com/fit/c/96/96/0*6Y-XULF_0OzPokWU.png">-->
+                        <!--                            <div>-->
+                        <!--                                <span class="article-author">Erik D. Kennedy</span>-->
+                        <!--                                <br>-->
+                        <!--                                <span class="article-date">Jan 17, 2017</span>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                    </div>
+                    <p>Being pretty self-taught as far as UI design goes, I’ve always wondered why so many articles and
+                        books talk about color theory and palettes. In my experience, using a “split complementary
+                        palette” is about 0% predictive of me making nice-looking designs.</p>
+                    <p>I have another word for that sort of thing: <em>useless</em>.</p>
+                    <p>So if color theory doesn’t provide a solid basis for color in UI design, what does?</p>
+                    <p>Let me throw an opinion at ya’: color <em>modifications</em>. It’s the tweaking of color that
+                        counts, not the picking of them from the color theory hat.</p>
+                    <p>Or, said another way: The <strong>fundamental</strong> skill of coloring interface designs is
+                        being able to <strong>modify</strong> one base color into <strong>many different
+                            variations</strong>.</p>
+                    <p>I know this sounds a little odd. Hear me out. I’m going to give you a framework for adjusting
+                        color in your UI designs.</p>
+                    <p>This framework will:</p>
+                    <ul>
+                        <li>Allow you to modify <strong>one theme color</strong> for basically any purpose in your UI
+                            (this is hugely powerful, and, as we’ll see, what apps like facebook are already doing)
+                        </li>
+                        <li>Help you to <strong>predict what color changes will look <em>good</em></strong></li>
+                        <li>Make color seem <strong>less subjective</strong> (“subjective” is often a word for “I
+                            haven’t figured out how it works” — and it’s a word you hear a <em>ton</em> when folks talk
+                            about color)
+                        </li>
+                    </ul>
+                    <p>Are we cool? We’re cool?</p>
+                    <p>Great.</p>
+                    <h1>Darker &amp; Lighter Variations</h1>
+                    <p>One thing I’ve noticed across many great-looking interfaces is that they often have darker and
+                        lighter variations on a particular theme color.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/896/1*Zebb-f-ULEc9Ii113ksa5Q.png" width="448"
+                                  height="505" role="presentation"></div>
+                    </figure>
+                    <p>You didn’t think that search bar was just a translucent black overlay, did you? Spoiler alert:
+                        it’s not. No opacity of black overlaid on that blue will give you the color of the search bar.
+                        It’s a variation picked by some other magic.</p>
+                    <p>Quick, now look at Swell Grid, the beautiful surf forecast app.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/1794/1*0-tWMLLKqvAPInnSNBigRw.png" width="897"
+                                  height="487" role="presentation"></div>
+                    </figure>
+                    <p>Sha-BAM. We just got hit with a boatload of variations. How many are there? Go to the <a
+                            href="http://swellgrid.com/australia/north-coast-nsw" target="_blank"
+                            rel="noopener nofollow">website</a> and count ’em yourself. Practically everything on this
+                        page is a variation of the initial blue.</p>
+                    <p>Or, here’s another simple example:</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/910/1*Vfetyb93BWZbrbhjcoFCjQ.png" width="455"
+                                  height="85" role="presentation"></div>
+                    </figure>
+                    <p>Even element <em>states</em> are variations on a color. This isn’t best described as “a palette
+                        of 3 blues”. It’s one blue with variations.</p>
+                    <p>But this begs the question: <em>how do you actually </em><strong><em>modify</em></strong><em> a
+                        color to get good variations?</em></p>
+                    <p>We’ll get there, but I want you to understand this stuff from the ground-up. So here are our 2
+                        trusty principles for figuring this stuff out:</p>
+                    <ol>
+                        <li>We’ll look to the <strong>real world for reference cues</strong>. Even though our interfaces
+                            are “fake”, we still copy like mad from the real world, because after decades of seeing
+                            things in the real world, we just <em>expect</em> light and color to <a target="_blank"
+                                                                                                    rel="noopener"
+                                                                                                    href="/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda">work
+                                in certain ways</a>.
+                        </li>
+                        <li>We’ll use the <strong>HSB color system</strong>. The short of it is: it’s the most intuitive
+                            color system with broad usage (for my purposes, Sketch and Photoshop). If you don’t know
+                            what hue, saturation, and brightness are, let’s <a
+                                    href="https://learnui.design/blog/the-hsb-color-system-practicioners-primer.html"
+                                    target="_blank" rel="noopener nofollow">break</a> and meet back in 10.
+                        </li>
+                    </ol>
+                    <h1>Real-World Color Variations</h1>
+                    <p>Alright, look around you. What “color variation” are you undoubtedly seeing two dozen instances
+                        of every time you glance around your room?</p>
+                    <p><em>Shadows.</em></p>
+                    <p>You can think of a shadow as a darker variation on a base color.</p>
+                    <figure class="paragraph-image">
+                        <div>
+                            <img src="https://miro.medium.com/max/1038/1*D2iCHDMNfNmLzGJlOqL86g.png" width="519"
+                                 height="409" role="presentation">
+                        </div>
+                        <figcaption>Photo by <a href="https://www.flickr.com/photos/nikonvscanon/474310396/"
+                                                target="_blank" rel="noopener nofollow">David Blaikie</a></figcaption>
+                    </figure>
+                    <p>With me?</p>
+                    <p>Now let’s jump into Sketch and get our color pickers and figure out <em>exactly</em> what happens
+                        when a shadow falls on our coral wall.</p>
+                    <p>Like I mentioned, we’ll be figuring this out in HSB.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/828/1*6zipl9z4CQD-Tm2VItC78g.png" width="414"
+                                  height="128" role="presentation"></div>
+                        <figcaption>Note: Monitor/image color profiles might make these exact measurements different for
+                            you.
+                        </figcaption>
+                    </figure>
+                    <p>The brightness moves down — OK, so <em>that</em> was pretty obvious. But hold up – before we go
+                        generalizing too much, let’s actually look at another example.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/1426/1*qHZQnmIMTpxMFSre_wyo8w.png" width="713"
+                                  height="358" role="presentation"></div>
+                        <figcaption>Photo by <a
+                                href="https://www.flickr.com/photos/photography-matthiasuhlig/14029265233/"
+                                target="_blank" rel="noopener nofollow">Matthias Uhlig</a></figcaption>
+                    </figure>
+                    <p>Do shadows work the same way in Cuba? We’re about to find out.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/828/1*QMAZ0jrMtHRF_GdgQ5h9sQ.png" width="414"
+                                  height="128" role="presentation"></div>
+                    </figure>
+                    <p>Alright, now we can compare and contrast. Notice a pattern?</p>
+                    <p>When there’s a shadowed variation of a color, you can expect <em>brightness</em> to go
+                        <em>down</em> and <em>saturation</em> to go <em>up</em>. We just looked at this in two
+                        instances, but <strong>as far as I’ve ever seen, it’s a solid rule you can go by</strong>.</p>
+                    <p>Now hue is a bit crazier — it went <em>down</em> for the coral wall shadow, and <em>up</em> for
+                        the teal wall shadow. There <em>is</em> an explanation for that, but it’s much less important
+                        and a bit more esoteric than saturation/brightness — so we’ll come back to hue later.</p>
+                    <h1>The Rules</h1>
+                    <p>Let’s unpack these concepts a bit more.</p>
+                    <h2><strong>Darker color variation = higher saturation + lower brightness</strong></h2>
+                    <p>If you look back to our facebook search bar example, you’ll see that’s exactly what’s going
+                        on.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/828/1*ooNBwTBKu1PZ8vz9U3bHyw.png" width="414"
+                                  height="128" role="presentation"></div>
+                        <figcaption>The hue moves 1° out of 360°, which is practically a rounding error.</figcaption>
+                    </figure>
+                    <p>The saturation went up as the brightness went down. The reason the search bar couldn’t be an
+                        opacity of black overlaid on the base blue is because, in HSB, <em>adding black</em> is
+                        equivalent to <em>reducing brightness</em>. Instead, we want to reduce brightness <em>while
+                            simultaneously adding saturation</em>. Black doesn’t add any saturation to our color!</p>
+                    <p>Why, in the real world, are darker colors correlated with higher saturations? I haven’t the
+                        slightest idea. But I can always make something up: <em>it’s because as the intensity of the
+                            light (brightness) overtakes intensity of color (saturation), the color necessarily becomes
+                            more washed out — and vice versa.</em></p>
+                    <p>That might be complete BS, but it <em>kind of </em>makes sense, right?</p>
+                    <h2>Lighter Color Variation = lower saturation + higher brightness</h2>
+                    <p>Now, being the discerning and erudite readers that you are, you probably guessed that the
+                        opposite transform that gives us <em>darker variations</em> will give us <em>lighter
+                            variations</em>.</p>
+                    <p>And you nailed it, by golly.</p>
+                    <p>Of course, we can go one step further. If we go on lowering saturation and raising brightness
+                        till the cows come home, where do we end up?</p>
+                    <p>Here:</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/256/1*k8oOsCUdscEQT_EaMxnqag.png" width="128"
+                                  height="128" role="presentation"></div>
+                    </figure>
+                    <p>We end up at white.</p>
+                    <p>You can think of <em>making lighter variations</em> as <em>adding white</em>. And there are two
+                        very simple ways to <em>add white </em>to a color in Sketch et al:</p>
+                    <ol>
+                        <li>Reduce the opacity of the element (if it’s on a white background)</li>
+                        <li>Add a translucent layer of white on top of the element</li>
+                    </ol>
+                    <h2>The Most Important Thing</h2>
+                    <p>If you remember only one thing from this article, remember this:</p>
+                    <blockquote>
+                        <p>
+                            <mark>Darker color variations are made by lowering brightness and increasing saturation.
+                                Brighter color variations are made by increasing brightness and lowering saturation.
+                            </mark>
+                        </p>
+                    </blockquote>
+                    <p>With this simple idea, you will be able to do amazing things with just a single color.</p>
+                    <p>The truth is, so many variations in color between elements — or even states of the same element —
+                        are just simple color modifications.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/1624/1*QikhbzylR2lOTGcSY8eP6g.png" width="812"
+                                  height="530" role="presentation"></div>
+                    </figure>
+                    <p>Here’s <a href="https://www.getharvest.com/" target="_blank" rel="noopener nofollow">Harvest</a>,
+                        the time-tracking app I use and love.</p>
+                    <p>Look at the header. The hover state is lighter. The selected state is darker.</p>
+                    <p>Or look at the green New Entry button.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/344/1*E3oPUwJXf_KgjtCiaPIBqg.png" width="172"
+                                  height="139" role="presentation"></div>
+                    </figure>
+                    <p>The hover state is a darker variation — higher saturation, lower brightness.</p>
+                    <p>You will use this <em>again and again</em>.</p>
+                    <p>To be fair, not every design follows this rule 100% of the time. In the Harvest header above, the
+                        selected state is <em>just</em> a lower brightness (saturation unchanged) and the hover state is
+                        <em>just</em> a lower saturation (brightness unchanged). But we’ve looked at how color works in
+                        the real world, and we know that why these designs look good is because they
+                        <em>approximate</em> the principles laid out here.</p>
+                    <h1>What About Hue?</h1>
+                    <p>Speaking of <em>approximating the principles laid out here</em>, we should talk about hue. I said
+                        it above too, but it bears repeating: hue is so secondary to the whole <em>saturation-and-brightness-move-in-opposite-directions </em>thing
+                        that you can often just ignore it entirely when making color adjustments.</p>
+                    <p>That being said, here’s the briefest of explanations.</p>
+                    <p>First of all, each color has a sort of “perceived brightness” to it. This is called <em>luminosity</em>.
+                    </p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/842/1*GLiOJLo9wLAbbVu40PkPLg.png" width="421"
+                                  height="176" role="presentation"></div>
+                    </figure>
+                    <p>Even though this blue and this yellow are both at 100% HSB brightness, which <em>appears</em>
+                        brighter?</p>
+                    <p>I mean, like, ask anyone off the street: <em>which is brighter?</em></p>
+                    <p>“Um. Yellow. Yellow?”</p>
+                    <p>Thanks, rando. You just discovered luminosity.</p>
+                    <p>“So I’m right?”</p>
+                    <p>Yes, yes you are. Even if you hold brightness and saturation constant, and <em>just vary
+                        hues</em>, you will get a <em>range of luminosities</em>, or perceived brightnesses, which we
+                        measure in values between 0 and 100.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/468/1*Socr6lUXapFhZE86Jsa1dg.png" width="234"
+                                  height="234" role="presentation"></div>
+                    </figure>
+                    <p>These are our hues in 30° intervals, all at 100% saturation and 100% brightness.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/478/1*c0A-5JQqtIVjDsI4R3rzGQ.png" width="239"
+                                  height="239" role="presentation"></div>
+                    </figure>
+                    <p>And <em>here </em>are our hues duplicated, put into Luminosity blend mode (on a white background
+                        — that’s critical to add if you’re following along in Sketch), and overlaid with the brightness
+                        of the resulting gray. This gives us a measure of the luminosity of the original color.</p>
+                    <p>In Luminosity blend mode, a <em>bright gray</em> means <em>high luminosity</em>, and a <em>dark
+                        gray</em> means <em>low luminosity</em>. If you think about it for a second, this makes perfect
+                        sense.</p>
+                    <p>Now, I’ve printed the numbers out for you, but chart’s worth a thousand numbers, right?</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/940/1*Ae52-cwRfQ1lTW1JAXZFow.png" width="470"
+                                  height="237" role="presentation"></div>
+                    </figure>
+                    <p>Look, Sherlock, a pattern.</p>
+                    <p>And this particular pattern answers our question from above. Remember how we saw that sometimes,
+                        for a shadow, hue would shift <em>down</em> and sometimes it would shift <em>up</em>? Why does
+                        it do that?</p>
+                    <p>Well, first, notice that this graph has three maximum points and three minimum points. The
+                        low-points are red, green, and blue. The high-points are cyan, magenta, and yellow.</p>
+                    <p>Does these particular colors ring a bell? Yes. RGB and CMY are popular color systems, but
+                        <strong>ignore that for now</strong>, because it’s leading you astray.</p>
+                    <p>The important bit is this: if you don’t count saturation and brightness, shifting hue towards red
+                        (0°), green (120°), or blue (240°) will <strong>decrease</strong> the luminosity, or perceived
+                        lightness of the color. And shifting the hue towards yellow (60°), cyan (180°), or magenta
+                        (300°) will <strong>increase</strong> the perceived lightness of the color.</p>
+                    <p>The trick is to just <strong>make the movement of the hue match up with the movement of the
+                        saturation and brightness</strong>. If you want a darker variation, move the hue towards red
+                        (0°), green (120°), or blue (240°), whichever is closest — and vice versa (with cyan, magenta,
+                        and yellow) for lighter variations. (Of course, this assumes you’re also lowering brightness and
+                        increasing saturation)</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/828/1*6zipl9z4CQD-Tm2VItC78g.png" width="414"
+                                  height="128" role="presentation"></div>
+                    </figure>
+                    <p>That’s why the shadow on the coral wall shifted <em>down</em> in hue — it was shifting towards
+                        red, at 0°, which is the nearest minimum point to 21°.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/828/1*QMAZ0jrMtHRF_GdgQ5h9sQ.png" width="414"
+                                  height="128" role="presentation"></div>
+                    </figure>
+                    <p>And that’s why the shadow on the teal wall shifted <em>up</em> in hue — it was shifting towards
+                        blue, at 240°, which is the nearest minimum point to 194°.</p>
+                    <p>Mind blown yet?</p>
+                    <h1>The Way of Color</h1>
+                    <p>So when it comes to color variations, ask yourself: do I need simply a lighter or darker
+                        variation on a color I already have?</p>
+                    <p>(And if you’re going for something clean and simple, the answer is so, so often <em>yes</em>)</p>
+                    <p><strong>Darker variations:</strong></p>
+                    <ul>
+                        <li>Brightness decreases</li>
+                        <li>Saturation increases</li>
+                        <li>Hue (often) shifts towards a luminosity minimum (red, green, or blue)</li>
+                    </ul>
+                    <p><strong>Lighter variations:</strong></p>
+                    <ul>
+                        <li>Brightness increases</li>
+                        <li>Saturation decreases</li>
+                        <li>Hue (often) shifts towards a luminosity maximum</li>
+                    </ul>
+                    <p>This will allow you to take one hue, but modify it endlessly for all your UI needs, using darker
+                        and lighter variations where appropriate.</p>
+                    <figure class="paragraph-image">
+                        <div><img src="https://miro.medium.com/max/2048/1*B6rAGIo1d8NbXMCZ0d9hAw.png" width="1024"
+                                  height="768" role="presentation"></div>
+                        <figcaption>An interface with <strong><em>one</em></strong> color and <strong>many</strong>
+                            modifications
+                        </figcaption>
+                    </figure>
+                    <p>I just whipped together a quick example here. A whole interface being built out of a single
+                        color. Say… <em>does that shade of teal look familiar</em>?</p>
+                    <p>Now I’ve been pretty brief with all of this. There are still many topics to cover:</p>
+                    <ul>
+                        <li>How is <strong>hue</strong> even more important in <strong>gradients</strong> and <strong>data
+                            visualization</strong>?
+                        </li>
+                        <li>When you’re in Sketch (etc.), what technique do you use to make <strong>darker
+                            variations</strong>?
+                        </li>
+                        <li>Do you to <strong>move saturation or brightness more</strong>?</li>
+                        <li>How do you find <strong>grays</strong> that match your color scheme?</li>
+                        <li>How do you pick <strong>totally unrelated colors</strong> that look good together?</li>
+                        <li>How do you fix it when colors <strong>clash</strong>?</li>
+                        <li>And, of course, just why <em>are</em> RGB and CMY the low/high points on the luminosity
+                            graph?
+                        </li>
+                    </ul>
+                    <p>I’m glad you asked.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('a[target=_blank]').forEach((e) => {
+        e.innerHTML += '<i class="material-icons"> open_in_new </i>';
+    })
+</script>
 </body>
 </html>

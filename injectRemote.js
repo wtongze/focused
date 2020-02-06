@@ -12,6 +12,6 @@
     'use strict';
     let loadRemote = document.createElement('script');
     loadRemote.type = "text/javascript";
-    loadRemote.src = "https://cdn.jsdelivr.net/gh/wtongze/focused@latest/focused.js";
+    loadRemote.src = "http://127.0.0.1:8080/focused.js";
     document.body.append(loadRemote);
 })();

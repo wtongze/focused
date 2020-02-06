@@ -7,7 +7,7 @@ let focusedStyle = document.createElement('link');
 focused.className = 'focused markdown-body';
 
 focusedStyle.rel = 'stylesheet';
-focusedStyle.href = 'https://cdn.jsdelivr.net/gh/wtongze/focused@latest/focused.css';
+focusedStyle.href = 'http://127.0.0.1:8080/focused.css';
 
 focused.append(article.cloneNode(true));
 let reader = focused.querySelector('div');

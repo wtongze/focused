@@ -11,6 +11,7 @@
     --theme-blockquote-border: #000000;
     --theme-figcaption-color: rgba(0, 0, 0, 0.54);
     --theme-figure-bg: rgba(256, 256, 256, 0.8);
+    --theme-article-info-bg: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +23,7 @@
         --theme-blockquote-border: #FFFFFF;
         --theme-figcaption-color: rgba(0, 0, 0, 0.54);
         --theme-figure-bg: rgba(256, 256, 256, 1);
+        --theme-article-info-bg: #495057;
     }
 }
 
@@ -85,6 +87,28 @@
 /*
     Reader Elements
 */
+.article-info {
+    margin-top: 2.5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--theme-article-info-bg);
+    color: var(--theme-text);
+
+    display: grid;
+    grid-template-columns: 48px auto;
+    align-items: center;
+}
+
+.article-info > img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+
+.article-info > div {
+    padding-left: 32px;
+}
+
 h1 {
     font-size: 2rem;
     font-weight: 700;

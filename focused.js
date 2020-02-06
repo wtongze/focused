@@ -86,5 +86,9 @@ function extractContent() {
     });
 
     // Remove aside nav
-    reader.querySelector('.reader > div aside').remove();
+    try {
+        reader.querySelector('.reader > div aside').remove();
+    } catch (e) {
+        console.log(e);
+    }
 }

@@ -23,7 +23,12 @@ function extractContent() {
     // replace with real pictures
     reader.querySelectorAll('figure noscript').forEach((fig) => {
         try {
-            fig.closest('figure > div').innerHTML = fig.innerHTML;
+            if (fig.closest('figure > div') !== null){
+                fig.closest('figure > div').innerHTML = fig.innerHTML;
+            }
+            else {
+                fig.closest('figure > a').innerHTML = fig.innerHTML;
+            }
         } catch (e) {
             console.log(fig, e);
         }

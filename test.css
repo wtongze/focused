@@ -4,9 +4,25 @@
   Theme Color Definition
 */
 :root {
-    --light-theme-bg: #F1F3F5;
-    --light-theme-text: #000000;
-    --light-theme-shadow: #CED4DA;
+    --theme-bg: #F1F3F5;
+    --theme-text: rgba(0, 0, 0, 0.84);
+    --theme-shadow: #CED4DA;
+    --theme-a-hover-bg: #FFFFFF;
+    --theme-blockquote-border: #000000;
+    --theme-figcaption-color: rgba(0, 0, 0, 0.54);
+    --theme-figure-bg: rgba(256, 256, 256, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-bg: #343a40;
+        --theme-text: rgba(256, 256, 256, 0.84);
+        --theme-shadow: #495057;
+        --theme-a-hover-bg: #212529;
+        --theme-blockquote-border: #FFFFFF;
+        --theme-figcaption-color: rgba(0, 0, 0, 0.54);
+        --theme-figure-bg: rgba(256, 256, 256, 1);
+    }
 }
 
 /*
@@ -23,8 +39,8 @@
     right: 0;
     bottom: 0;
 
-    background-color: var(--light-theme-bg);
-    color: var(--light-theme-text);
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
 
     z-index: 10000;
     overflow: auto;
@@ -36,6 +52,34 @@
 .reader {
     width: 1040px;
     margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .reader {
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .reader {
+        width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .reader {
+        width: 540px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .reader {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 /*
@@ -67,7 +111,7 @@ p {
     line-height: 1.6;
     word-break: break-word;
 
-    color: rgba(0, 0, 0, 0.84);
+    color: var(--theme-text);
 
     margin-top: 2.5rem;
     margin-bottom: 0;
@@ -82,7 +126,7 @@ figure {
 
     padding: 1.5rem;
     border-radius: 1rem;
-    background-color: rgba(256, 256, 256, 0.8);
+    background-color: var(--theme-figure-bg);
 }
 
 figure > div {
@@ -97,6 +141,7 @@ figure > div {
 
 figure > div > img {
     max-height: inherit;
+    height: auto;
     width: auto;
     max-width: inherit;
 }
@@ -104,7 +149,7 @@ figure > div > img {
 figure > figcaption {
     margin: 10px auto 0;
 
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--theme-figcaption-color);
 
     line-height: 1.4;
     font-weight: 300;
@@ -131,7 +176,7 @@ blockquote {
     margin: 2.5rem 0 0;
 
     padding: 1rem 40px;
-    border-left: 0.25rem solid black;
+    border-left: 0.25rem solid var(--theme-blockquote-border);
 }
 
 blockquote > p {
@@ -140,8 +185,10 @@ blockquote > p {
 
 mark {
     background-color: transparent;
+    margin: 0;
     font-size: 1.25rem;
     font-style: italic;
+    color: var(--theme-text);
 }
 
 a {
@@ -158,8 +205,8 @@ figcaption > a:hover {
 }
 
 a:hover {
-    box-shadow: 3px 3px 9px var(--light-theme-shadow);
-    background-color: white;
+    box-shadow: 3px 3px 9px var(--theme-shadow);
+    background-color: var(--theme-a-hover-bg);
 }
 
 a > i.material-icons {

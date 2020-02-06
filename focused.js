@@ -3,15 +3,11 @@
 let article = document.querySelector('article > div:nth-child(3)');
 let focused = document.createElement('div');
 let focusedStyle = document.createElement('link');
-let gfmStyle = document.createElement('link');
 
 focused.className = 'focused markdown-body';
 
 focusedStyle.rel = 'stylesheet';
-focusedStyle.href = 'https://cdn.jsdelivr.net/gh/wtongze/focused@latest/reader.css';
-
-gfmStyle.rel = 'stylesheet';
-gfmStyle.href = 'https://cdn.jsdelivr.net/npm/github-markdown-css@3.0.1/github-markdown.css';
+focusedStyle.href = 'https://cdn.jsdelivr.net/gh/wtongze/focused@latest/focused.css';
 
 focused.append(article.cloneNode(true));
 let reader = focused.querySelector('div');
@@ -19,7 +15,7 @@ reader.className = 'reader';
 
 extractContent();
 
-document.head.append(gfmStyle, focusedStyle);
+document.head.append(focusedStyle);
 document.body.append(focused);
 document.body.style.overflow = 'hidden';
 
@@ -72,4 +68,9 @@ function extractContent() {
     articleInfo.insertAdjacentElement('beforeend', articleDate);
 
     articleInfo.querySelector('div:first-of-type').remove();
+
+    // Add material design icon to a tag link
+    reader.querySelectorAll('a[target=_blank]').forEach((e) => {
+        e.innerHTML += '<i class="material-icons"> open_in_new </i>';
+    })
 }

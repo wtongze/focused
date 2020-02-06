@@ -7,7 +7,7 @@ let focusedStyle = document.createElement('link');
 focused.className = 'focused markdown-body';
 
 focusedStyle.rel = 'stylesheet';
-focusedStyle.href = 'http://127.0.0.1:8080/focused.css';
+focusedStyle.href = 'https://raw.githack.com/wtongze/focused/master/focused.css';
 
 focused.append(article.cloneNode(true));
 let reader = focused.querySelector('div');
@@ -65,17 +65,26 @@ function extractContent() {
     articleInfo.className = 'article-info';
 
     articleInfo.insertAdjacentElement('beforeend', articleInfoRaw[0].querySelector('img'));
-    articleInfo.insertAdjacentElement('beforeend', articleInfoRaw[1]);
+
+    let articleAuthor = document.createElement('span');
+    articleAuthor.className = 'article-author';
+    articleAuthor.innerText = articleInfoRaw[1].innerText;
 
     let articleDate = document.createElement('span');
     articleDate.className = 'article-date';
     articleDate.innerText = articleInfoRaw[2].innerText;
-    articleInfo.insertAdjacentElement('beforeend', articleDate);
 
     articleInfo.querySelector('div:first-of-type').remove();
+
+    let articleInfoDiv = document.createElement('div');
+    articleInfoDiv.innerHTML = articleAuthor.outerHTML + '<br />' + articleDate.outerHTML;
+    articleInfo.insertAdjacentElement('beforeend', articleInfoDiv);
 
     // Add material design icon to a tag link
     reader.querySelectorAll('a[target=_blank]').forEach((e) => {
         e.innerHTML += '<i class="material-icons"> open_in_new </i>';
-    })
+    });
+
+    // Remove aside nav
+    reader.querySelector('.reader > div aside').remove();
 }

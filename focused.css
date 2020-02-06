@@ -152,9 +152,12 @@ figure {
     padding: 1.5rem;
     border-radius: 1rem;
     background-color: var(--theme-figure-bg);
+
+    text-align: center;
 }
 
-figure > div {
+figure > div,
+figure > a {
     height: auto;
     max-height: 75vh;
     width: auto;
@@ -164,11 +167,12 @@ figure > div {
     text-align: center;
 }
 
-figure > div > img {
+figure > div > img,
+figure > a > img{
+    max-width: 100%;
     max-height: inherit;
     height: auto;
     width: auto;
-    max-width: inherit;
 }
 
 figure > figcaption {
@@ -232,6 +236,11 @@ figcaption > a:hover {
 a:hover {
     box-shadow: 3px 3px 9px var(--theme-shadow);
     background-color: var(--theme-a-hover-bg);
+}
+
+figure a:hover {
+    box-shadow: none;
+    background-color: transparent;
 }
 
 a > i.material-icons {
